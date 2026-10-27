@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <link rel="manifest" href="/WorkSchedule-Site/manifest.webmanifest" />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <link rel="apple-touch-icon" href="/WorkSchedule-Site/icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="WorkSchedule" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/WorkSchedule-Site/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <script>
+      (function () {
+        var params = new URLSearchParams(
+          window.location.search,
+        );
+
+        var path = params.get('p');
+
+        if (!path) {
+          return;
+        }
+
+        var query = params.get('q');
+        var hash = params.get('h');
+
+        var restoredUrl =
+          '/WorkSchedule-Site' +
+          path +
+          (query ? '?' + query : '') +
+          (hash ? '#' + hash : '');
+
+        window.history.replaceState(
+          null,
+          '',
+          restoredUrl,
+        );
+      })();
+  </script>
+  <title>WorkSchedule</title>
+  <script type="module" crossorigin src="/WorkSchedule-Site/assets/index-vx3QprF-.js"></script>
+  <link rel="stylesheet" crossorigin href="/WorkSchedule-Site/assets/index-I6xF9G8x.css">
+<link rel="manifest" href="/WorkSchedule-Site/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/WorkSchedule-Site/registerSW.js" defer></script></head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

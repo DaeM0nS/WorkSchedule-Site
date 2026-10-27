@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Dégradé principal du portefeuille (Bleu moderne) -->
+    <linearGradient id="wallet-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+
+    <!-- Dégradé de la carte (Gris clair) -->
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f3f4f6" />
+    </linearGradient>
+    
+    <!-- Ombre portée pour donner de la profondeur -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- Fond arrondi PWA (optionnel, retire la balise rect si tu veux l'icône détourée) -->
+  <rect width="512" height="512" rx="112" fill="#eff6ff" />
+
+  <!-- CARTE DE VISITE (Arrière-plan, sortant du portefeuille) -->
+  <!-- Tournée légèrement pour un effet dynamique -->
+  <g transform="translate(256, 210) rotate(-15) translate(-256, -210)" filter="url(#shadow)">
+    <!-- Base de la carte -->
+    <rect x="130" y="110" width="280" height="170" rx="16" fill="url(#card-grad)" />
+    <!-- Avatar générique sur la carte -->
+    <circle cx="180" cy="195" r="24" fill="#93c5fd" />
+    <!-- Lignes de texte sur la carte -->
+    <rect x="220" y="175" width="140" height="12" rx="6" fill="#bfdbfe" />
+    <rect x="220" y="200" width="90" height="12" rx="6" fill="#bfdbfe" />
+  </g>
+
+  <!-- PORTEFEUILLE (Premier plan) -->
+  <g filter="url(#shadow)">
+    <!-- Rabat arrière du portefeuille -->
+    <path d="M96 240 C96 222.3 110.3 208 128 208 L384 208 C401.7 208 416 222.3 416 240 L416 368 C416 385.7 401.7 400 384 400 L128 400 C110.3 400 96 385.7 96 368 Z" fill="#2563eb" />
+    
+    <!-- Rabat avant du portefeuille (plus foncé pour la profondeur) -->
+    <path d="M96 270 L416 270 L416 368 C416 385.7 401.7 400 384 400 L128 400 C110.3 400 96 385.7 96 368 Z" fill="url(#wallet-grad)" />
+    
+    <!-- Bouton/Fermoir du portefeuille -->
+    <rect x="236" y="260" width="40" height="20" rx="10" fill="#fbbf24" />
+  </g>
+</svg>
